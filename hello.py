@@ -1,11 +1,7 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
-a=np.array([[0,1,2],
-            [1,2,3]])
+x=np.random.normal(50,10,10000)
 
-b=np.array([[2,1],
-            [2,1],
-            [2,1]])
-
-
-print(a.T)
+plt.hist(x,bins=50)
+plt.show()
