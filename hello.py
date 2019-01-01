@@ -1,10 +1,11 @@
 import numpy as np
-import matplotlib.pyplot as plt
+import matplotlib.pylab as plt
 
-x=np.random.normal(50,10,10000)
+def sigmoid_function(x):
+    return 1/(1+np.exp(-x))
 
-print(np.average(x))
-print(np.std(x))
+x=np.linspace(-5,5)
+y=sigmoid_function(x)
 
-plt.hist(x,bins=50)
+plt.plot(x,y)
 plt.show()
